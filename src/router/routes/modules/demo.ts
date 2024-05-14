@@ -13,10 +13,19 @@ const DEMO: AppRouteRecordRaw = {
   children: [
     {
       path: 'hello',
-      name: 'hello',
+      name: 'DemoHello',
       component: () => import('@/views/demo/hello/index.vue'),
       meta: {
         locale: 'menu.demo.hello',
+        requiresAuth: true,
+      },
+    },
+    {
+      path: 'list',
+      name: 'DemoList',
+      component: () => import('@/views/demo/list/index.vue'),
+      meta: {
+        locale: 'menu.demo.list',
         requiresAuth: true,
       },
     },
