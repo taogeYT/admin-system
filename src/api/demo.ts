@@ -19,5 +19,7 @@ export interface DemoParams {
 }
 
 export function queryDemoList(params: DemoParams) {
-  return axios.get<DemoList>('http://127.0.0.1:8000/demos', { params });
+  return axios.get<DemoList>('http://127.0.0.1:8000//api/demo/hello', {
+    params,
+  });
 }
