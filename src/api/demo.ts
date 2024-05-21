@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 export interface Record {
+  key: string;
   name: string;
   phone: string;
   salary: number;
@@ -19,7 +20,7 @@ export interface DemoParams {
 }
 
 export function queryDemoList(params: DemoParams) {
-  return axios.get<DemoList>('http://127.0.0.1:8000//api/demo/hello', {
+  return axios.get<DemoList>('http://127.0.0.1:8000/api/demo/hello', {
     params,
   });
 }
